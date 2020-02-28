@@ -1,0 +1,50 @@
+<DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Java Script</title>
+		<meta charset="utf-8">	
+	</head>
+	
+	<body>
+		<h1>Calculadora javaScript</h1>
+		<button onclick="calcular('+')">+</button>
+		<button onclick="calcular('-')">-</button>
+		<button onclick="calcular('/')">%</button>
+		<button onclick="calcular('*')">x</button>
+		
+		<p id="output"></p>
+		
+		<script>
+		
+		var n1 =parseFloat(prompt("Digite um número"));
+			escrever();
+		
+		function escrever(){
+			var output = document.getElementById("output");
+			output.innerHTML = n1;
+		}		
+		
+		function calcular(operacao){
+			var n2 = parseFloat(prompt("Digite um número."))
+			switch(operacao){
+				case "+":
+					n1=n1+n2;
+					break;
+				case "-":
+					n1=n1-n2;
+					break;
+				case "/":
+					n1=n1/n2;
+					break;
+				case"*":
+					n1=n1*n2;
+					break;
+
+			}
+			escrever();
+		}
+		
+		
+		</script>
+	</body>
+</html>
